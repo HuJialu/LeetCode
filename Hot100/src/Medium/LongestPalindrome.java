@@ -11,12 +11,12 @@ import java.util.List;
 public class LongestPalindrome {
     //动态规划
     public String longestPalindrome1(String s) {
-            int n = s.length();
-            boolean[][] dp = new boolean[n][n];
-            String ans = "";
+        int n = s.length();
+        boolean[][] dp = new boolean[n][n];
+        String ans = "";
         for (int l = 0; l < n; l++) {
-            for (int i = 0; i < n - 1; i++) {
-                int j = i + 1;
+            for (int i = 0; i < n - l; i++) {
+                int j = i + l;
                 if(l == 0){
                     dp[i][j] = true;
                 }
